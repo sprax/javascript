@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<p>The splice() methods can be used to remove array elements.</p>
+<p>The A.unshift(A.pop()) methods can be used to cycle array elements left to right.</p>
 
 <button onclick="myFunction()">Try it</button>
 
