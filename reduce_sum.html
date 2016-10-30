@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get the sum of the rounded numbers in the array.</p>
+<button onclick="myFunction()">Try it</button>
+
+<p>Numbers array: <span id="array"></span></p>
+<p>Sum of numbers in array: <span id="demo"></span></p>
+
+<script>
+var numbers = [15.5, 2.3, 1.1, 4.7];
+document.getElementById("array").innerHTML = numbers;
+
+function getSum(total, num) {
+    return total + Math.round(num);
+}
+function myFunction(item) {
+    document.getElementById("demo").innerHTML = numbers.reduce(getSum,0);
+}
+</script>
+
+</body>
+</html>
+
