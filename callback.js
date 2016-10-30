@@ -17,7 +17,6 @@ function some_function(arg1, arg2, callback) {
 // call the function
 
 elem = document.getElementById("demo"); // Find an element
-
 elem.innerHTML = "Calling: some_function(5, 15, function(num)<br>\
 {console.log(\"callback called! \" + num);<br>\
 });\n"
