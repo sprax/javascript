@@ -33,11 +33,18 @@ var rows = [
 var stacks = []
 
 function listRows() {
+    stacks = []
     for (var j = 0; j < rows.length; j++) {
-        stacks.push(rows[j][2])
+        var wrk = parseInt(rows[j][1].split(" ")[0]);
+        var arr = rows[j][2].split(" ");
+        var cmp = parseInt(arr[2]);
+        var tot = parseInt(arr[4]);
+        stacks.push([wrk, cmp, tot, 'dog'])
+    }
 }
 
 document.getElementById("demo").innerHTML = fruits.join(", ");
+
 function shrink(str) {
     if (str.length > 1) {
         str = str.slice(0, -1)
@@ -50,7 +57,7 @@ function myFunction() {
     fruits.push(fruits.shift());
     document.getElementById("demo").innerHTML = fruits.join(", ");
     listRows()
-    document.getElementById("rows").innerHTML = stacks.join(", ");
+    document.getElementById("rows").innerHTML = stacks[5][2];
 }
 </script>
 
