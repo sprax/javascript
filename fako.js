@@ -74,10 +74,12 @@ function myFunction2() {
       if (cohortTs < cutoffTs) {
         let orgId = fakeOrg.orgId; 
         let profId = randomInRange(fakeOrg.minPid, fakeOrg.maxPid).toString();
-        let eventCount = randomInRange(1, 37).toString();
+        let eventCount = randomInRange(2, 5);
         // fakeRows[fakeRowsCount++] = [year, mord, profId, orgId, (new Date(cohortTs*1000)).getMonth() + '', eventCount];
         // fakeRows[fakeRowsCount++] = [year, mord, profId, orgId, cohortTs.toString(), eventCount];
-        fakeRows[fakeRowsCount++] = [year, mord, orgId, cohortTs.toString(), eventCount];
+        if (eventCount > 1) {
+          fakeRows[fakeRowsCount++] = [year, mord, orgId, cohortTs.toString(), eventCount.toString()];
+        }
       }
     }
   }
