@@ -29,12 +29,16 @@ function myFunction() {
     let tss = tsc.toString();
     let dtc = dateFromTimeStamp(tss);
     let dat = dateFromTimeStamp('1486000024803000000');
+    let arr = [0,1,2,3,4];
 
     document.getElementById("demo").innerHTML = [
     dtj, '<br>',
     tsc, '<br>',
     dtc, '<br>',
     dat, '<br>',
+    arr[arr.length-3], '<br>',
+    (3 in arr), '<br>',
+    (arr.includes(3)), '<br>',
     ];
 }
 
