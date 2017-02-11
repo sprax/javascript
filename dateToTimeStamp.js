@@ -30,6 +30,16 @@ function myFunction() {
     let dtc = dateFromTimeStamp(tss);
     let dat = dateFromTimeStamp('1486000024803000000');
     let arr = [0,1,2,3,4];
+    filters = "ga:eventCategory==workflows;ga:eventAction=~^create";
+    let ffr = ["ga:dimension7!=true"].concat(filters).join(';')
+
+    let filter_disabled = true;
+    let message_filters = "ga:eventCategory==messages";
+    if (filter_disabled) {
+        message_filters += ';ga:dimension7!=true';
+    }
+    let concats = ['ga:dimension7!=true'].concat(message_filters).join(';');
+
 
     document.getElementById("demo").innerHTML = [
     dtj, '<br>',
@@ -39,6 +49,9 @@ function myFunction() {
     arr[arr.length-3], '<br>',
     (3 in arr), '<br>',
     (arr.includes(3)), '<br>',
+    ffr, '<br>',
+    message_filters, '<br>',
+    concats, '<br>',
     ];
 }
 
