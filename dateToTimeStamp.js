@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<p>Click the button to return the highest number of 5 and 10.</p>
-
-<button onclick="myFunction()">Try it</button>
+<p>Date and timestamp conversion.</p>
 
 <p id="demo"></p>
 
@@ -34,13 +28,17 @@ function myFunction() {
     let tsc = unixTimeStampFromDate(dtj);
     let tss = tsc.toString();
     let dtc = dateFromTimeStamp(tss);
+    let dat = dateFromTimeStamp('1486000024803000000');
 
     document.getElementById("demo").innerHTML = [
     dtj, '<br>',
     tsc, '<br>',
     dtc, '<br>',
+    dat, '<br>',
     ];
 }
+
+myFunction();
 </script>
 
 </body>
