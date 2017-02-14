@@ -39,7 +39,11 @@ function myFunction() {
         message_filters += ';ga:dimension7!=true';
     }
     let concats = ['ga:dimension7!=true'].concat(message_filters).join(';');
+    //Promise.all([1, 2]).then(function(results) {});
 
+    var date = new Date();
+    var firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+    var lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
 
     document.getElementById("demo").innerHTML = [
     dtj, '<br>',
@@ -52,6 +56,10 @@ function myFunction() {
     ffr, '<br>',
     message_filters, '<br>',
     concats, '<br>',
+    arr.length, '<br>',
+    firstDay, '<br>',
+    lastDay, '<br>',
+    lastDay.toISOString().substring(0,10), '<br>',
     ];
 }
 
